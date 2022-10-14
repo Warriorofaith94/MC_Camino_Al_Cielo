@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/iglesia_styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/f64aae6820.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" type="image/png" href="images/cross.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+    <title>Misión Cristiana Camino al Cielo</title>
+
+  </head>
+
+<body>
+
+    <div class="scrollToTop-btn flex-center">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <header>
+      <div class="logo-white">
+        <a href="index.html"> <img src="images/logo.png" alt="logo">
+        Misión Cristiana <br> Camino al Cielo </a>
+      </div>
+
+      <div id="myNav" class="overlay-n">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content-regular">
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="ministerios.html">Ministerios</a></li>
+            <li><a  href="ubicacion.html">Ubicación </a></li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="gone" onclick="openNav()">
+        <div class="hamburger">
+          <div class="white-line"></div>
+          <div class="white-line"></div>
+          <div class="white-line"></div>
+        </div>
+
+      </span>
+
+      <span onclick="openNav()"></span>
+
+      <nav class="nav-bar color">
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="ministerios.html">Ministerios</a></li>
+          <li><a href="ubicacion.html">Ubicación </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="ministerio-banner-area">
+      <div class="adolescentes-banner-img"> </div>
+        <div class="banner-content">
+          <h2> Guerreros de La Fe </h2>
+          <h3> Horario </h3>
+          <p> Sábado 6:30 pm </p>
+           <a href="#información" class="ministerio-color-btn"> Quienes Somos ?</a>
+           <a href="#fotos" class="ministerio-color-btn"> Ver Fotos </a>
+        </div>
+    </section>
+
+    <section class="ministerios-mf-area ministerio-mf-section" id="información">
+      <div class="ministerios-mf-row ">
+          <div class="ministerios-mf-column-brown">
+            <h2> Quienes Somos ? </h2>
+            <p>
+              Somos jovenes fuertes y valientes, listos para enfrentar
+              y ganar al adversario con nuestras almas llenas de Cristo.
+            </p>
+          </div>
+          <div class="ministerios-mf-column">
+            <h2> 1 Timoteo 4 : 12 </h2>
+            <p>
+              "Nunca tenga en poco tu juventud,
+              sino sé ejemplo de los creyentes en palabra,
+              conducta, amor, espíritu, fe y fuerza"
+            </p>
+          </div>
+          <div class="ministerios-mf-column-brown">
+            <h2> Que hacemos ? </h2>
+          <p>
+              Educar a los jovenes a buscar el proposito de Dios para sus vidas.
+          </p>
+          </div>
+      </div>
+    </section>
+
+    <section id="fotos" class="ministerio-gallery-section">
+
+      <div class="fotos-heading flex-center"  >
+        <h2> <span> Fotos </span> </h2>
+      </div>
+
+      <div class="gallery" >
+        <a href="images/adolescentes/adolescentes_iglesia_1.jpg">
+          <img src="images/adolescentes/adolescentes_iglesia_1.jpg" alt="Adolescentes">
+        </a>
+        <a href="images/adolescentes/adolescentes_iglesia_2.jpg">
+          <img src="images/adolescentes/adolescentes_iglesia_2.jpg" alt="Adolescentes">
+        </a>
+        <a href="images/adolescentes/adolescentes_iglesia_3.jpg">
+          <img src="images/adolescentes/adolescentes_iglesia_3.jpg" alt="Adolescentes">
+        </a>
+        <a href="images/adolescentes/adolescentes_iglesia_4.jpg">
+          <img src="images/adolescentes/adolescentes_iglesia_4.jpg" alt="Adolescentes">
+        </a>
+        <a href="images/adolescentes/adolescentes_iglesia_5.jpg">
+          <img src="images/adolescentes/adolescentes_iglesia_5.jpg" alt="Adolescentes">
+        </a>
+        <a href="images/adolescentes/adolescentes_iglesia_6.jpg">
+          <img src="images/adolescentes/adolescentes_iglesia_6.jpg" alt="Adolescentes">
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="icon-footer">
+        <a href="https://www.facebook.com/misioncristianacaminoalcielo" target="_blank">
+          <i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.youtube.com/user/MCCaminoAlCielo" target="_blank">
+          <i class="fa-brands fa-youtube"></i></a>
+      </div>
+
+      <p>Misión Cristiana Camino Al Cielo © 2022</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <script>
+      lightGallery(document.querySelector('.gallery'));
+    </script>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>

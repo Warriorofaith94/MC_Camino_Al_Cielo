@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="css/iglesia_styles.css" >
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/f64aae6820.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" type="image/png" href="images/cross.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+    <title>Misión Cristiana Camino al Cielo</title>
+
+  </head>
+
+<body>
+
+  <div class="scrollToTop-btn flex-center">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+
+  <header>
+    <div class="logo-white">
+      <a href="index.html"> <img src="images/logo.png" alt="logo">
+      Misión Cristiana <br> Camino al Cielo </a>
+    </div>
+
+    <div id="myNav" class="overlay-n">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content-regular">
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="ministerios.html">Ministerios</a></li>
+          <li><a  href="ubicacion.html">Ubicación </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="gone" onclick="openNav()">
+      <div class="hamburger">
+        <div class="white-line"></div>
+        <div class="white-line"></div>
+        <div class="white-line"></div>
+      </div>
+
+    </span>
+
+    <span onclick="openNav()"></span>
+
+    <nav class="nav-bar color">
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="ministerios.html">Ministerios</a></li>
+        <li><a href="ubicacion.html">Ubicación </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="ministerio-banner-area">
+    <div class="adoracion-banner-img"> </div>
+      <div class="banner-content">
+        <h2> Adoracion </h2>
+        <h3> Horarios </h3>
+        <p> Miércoles 8 pm </p>
+        <p> Domingo 9 o 11 am </p>
+         <a href="#información" class="ministerio-color-btn"> Quienes Somos ?</a>
+         <a href="#fotos" class="ministerio-color-btn"> Ver Fotos </a>
+      </div>
+  </section>
+
+  <section class="ministerios-mf-area ministerio-mf-section" id="información">
+    <div class="ministerios-mf-row ">
+        <div class="ministerios-mf-column-brown">
+          <h2> Quienes Somos ? </h2>
+          <p>
+            Somos un grupo de personas que damos a conocer a Dios atravez de la musica,
+            llegando no solo al corazon, sino tambien al espiritu de aquellos que han sido tocados por ella, y a la vez que puedan experimentar un cambio en sus vidas,
+            entregandola al nuestro Rey que es el unico que es digno de alabar.
+          </p>
+        </div>
+        <div class="ministerios-mf-column">
+          <h2>
+            Salmos 9: 1 - 2
+          </h2>
+          <p>
+          "Te alabaré, oh Jehová, con todo mi corazón, contaré todas tus maravillas.
+           Me alegrare y me regocijare en ti;
+          Cantare a tu nombre, oh altisimo."
+          </p>
+        </div>
+        <div class="ministerios-mf-column-brown">
+          <h2>
+            Que hacemos ?
+          </h2>
+          <p>
+            Formar grupos de adoracion <br>
+            Conducir al pueblo de Dios a la alabanza y adoracion del trino Dios
+            (Padre, Hijo, y Espiritu Santo) <br>
+            Evangelizar y dar testimonios atravez de la musica.
+        </p>
+        </div>
+    </div>
+  </section>
+
+  <section id="fotos"  class="ministerio-gallery-section">
+
+    <div class="fotos-heading flex-center">
+      <h2> <span> Fotos </span> </h2>
+    </div>
+
+    <div class="gallery" >
+      <a href="images/adoracion/adoracion_iglesia_1.jpg">
+        <img src="images/adoracion/adoracion_iglesia_1.jpg" alt="adoracion">
+      </a>
+      <a href="images/adoracion/adoracion_iglesia_2.jpg">
+        <img src="images/adoracion/adoracion_iglesia_2.jpg" alt="adoracion">
+      </a>
+      <a href="images/adoracion/adoracion_iglesia_3.jpg">
+        <img src="images/adoracion/adoracion_iglesia_3.jpg" alt="adoracion">
+      </a>
+      <a href="images/adoracion/adoracion_iglesia_4.jpg">
+        <img src="images/adoracion/adoracion_iglesia_4.jpg" alt="adoracion">
+      </a>
+      <a href="images/adoracion/adoracion_iglesia_5.jpg">
+        <img src="images/adoracion/adoracion_iglesia_5.jpg" alt="adoracion">
+      </a>
+      <a href="images/adoracion/adoracion_iglesia_6.jpg">
+        <img src="images/adoracion/adoracion_iglesia_6.jpg" alt="adoracion">
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="icon-footer">
+      <a href="https://www.facebook.com/misioncristianacaminoalcielo" target="_blank">
+        <i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.youtube.com/user/MCCaminoAlCielo" target="_blank">
+        <i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <p>Misión Cristiana Camino Al Cielo © 2022</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+  <script>
+    lightGallery(document.querySelector('.gallery'));
+  </script>
+
+  <script src="script.js"></script>
+
+ </body>
+</html>

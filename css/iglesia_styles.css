@@ -1,0 +1,4647 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+ul, ul.nav{
+  list-style: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+section{
+  padding: 100px;
+}
+
+/* Section Area  */
+
+.section {
+  position: relative;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6rem 2rem 2rem;
+}
+
+/* Heading Center  */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button Up & Down */
+
+.scrollToTop-btn {
+  z-index: 99999;
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  background: #F2D5A0;
+  color: #0D0D0D;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.scrollToTop-btn.active {
+  right: 15px;
+  pointer-events: all;
+  opacity: 1;
+}
+
+ .down-arrow .scroll-down {
+  display: inline-block;
+  color: #BF5D39;
+  font-size: 30px;
+  margin-top: 70px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.scroll-down i {
+  padding-left: 10px;
+  color: white;
+  animation: arrow-down ease 2s infinite;
+}
+
+@keyframes arrow-down {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(10px);
+  }
+}
+
+/* navbar full screen area */
+
+ header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 100px 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   width: 100%;
+ }
+
+.hamburger{
+  display: none;
+}
+
+.nav-bar ul{
+  display: flex;
+}
+
+.nav-bar ul li a{
+  display: block;
+  color: white;
+  font-size: 20px;
+  padding: 15px 25px;
+  transition: 0.2s;
+}
+
+.nav-bar ul li a:hover {
+ color: #BF5D39;
+}
+
+ .church-home a{
+  pointer-events: none;
+}
+
+.overlay-n {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  background: #F2D5A0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content-regular {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  list-style: none;
+}
+
+.overlay-content-phone {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  list-style: none;
+}
+
+.overlay-content-small-phone {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  list-style: none;
+}
+
+.overlay-n a {
+  font-size: 36px;
+  color: #0D0D0D;
+  display: block;
+  transition: 0.3s;
+  padding: 0 0 30px 0;
+}
+
+.overlay-n a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay-n.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  font-size: 60px;
+}
+
+/* Navbar with color */
+
+.color-bar {
+  background: #F2D5A0;
+}
+
+.color-bar ul{
+  display: flex;
+}
+
+.color-bar ul li a{
+  display: block;
+  color: #0D0D0D;
+  font-size: 20px;
+  padding: 15px 25px;
+  transition: 0.2s;
+}
+
+.color-bar ul li a.active{
+    pointer-events: none;
+    color:#BF5D39;
+}
+
+.color-bar a:hover{
+  color:#BF5D39;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: #0D0D0D;
+  padding: 20px 0 20px 30px;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+
+.logo-text a{
+  color:#0D0D0D;
+}
+
+.logo-text a:hover {
+  color:#BF5D39;
+}
+
+
+.logo-white a {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  padding: 20px 0 20px 30px;
+}
+
+.logo-white img {
+  width: 45px;
+  margin-right: 10px;
+}
+
+/* banner area */
+
+.banner-area {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.casa-banner-img {
+  background-image: url("../images/sky_mainpage.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-position: center;
+  filter: blur(2px);
+}
+
+.banner-area .banner-content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.banner-area .banner-content h2 {
+  font-size: 80px;
+  margin-bottom: 15px;
+}
+
+.banner-area .banner-content p {
+    font-size: 35px;
+    line-height: 50px;
+    font-weight: 100;
+}
+
+.banner-btn {
+  font-size: 20px;
+  color:#BF5D39;
+  background: white;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 900;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.banner-btn:hover {
+  background-color: #BF5D39;
+  color: white;
+  transition: .5s ease;
+}
+
+/* message area */
+
+.msg-area {
+  background: url("../images/ecuador.jpg");
+  background-size: cover;
+  background-position: center, center;
+  background-attachment: fixed;
+}
+
+.msg-area h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+}
+
+.msg-area p {
+  font-size: 30px;
+  line-height: 1.5em;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+/* Horarios area */
+
+.horarios-container {
+  position: relative;
+  width: 100%;
+}
+
+.horarios-heading {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #BF5D39;
+  text-align: center;
+}
+
+.horarios-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.horarios-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #BF5D39;
+  border-radius: 8px;
+}
+
+.horarios-container:hover .horarios-overlay {
+  opacity: 1;
+}
+
+.horarios-text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.horarios-text h2 {
+  font-size: 30px;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.horarios-text p {
+  font-size: 25px;
+}
+
+.horarios-column {
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+}
+
+.horarios-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* ---- index.html ----- */
+
+/* Nosotros - Area */
+
+.nosotros-heading {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: #BF5D39;
+  text-align: center;
+}
+
+.nosotros-heading h2 {
+  margin-top: 50px;
+}
+
+.nosotros-page-heading {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: #BF5D39;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.nosotros-lee-mas-heading {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: #BF5D39;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nosotros-section {
+  padding: 100px;
+}
+
+.nosotros-lee-section {
+  padding: 170px 0 0 0;
+}
+
+.nosotros-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.nosotros-row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.nosotros-column {
+  float: left;
+  width: 33.3%;
+  padding: 20px;
+}
+
+.nosotros-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.nosotros-image-container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: #BF5D39;
+  font-size: 30px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .5s ease;
+}
+
+.nosotros-image-container .btn:hover {
+  background-color: #BF5D39;
+  color: white;
+}
+
+.nosotros-btn {
+  font-size: 1em;
+  color: #BF5D39;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 900;
+  border-radius: 8px;
+  border: 3px solid #BF5D39;
+  margin-right: 10px;
+}
+
+.nosotros-btn:hover {
+  background-color: #BF5D39;
+  color: white;
+  transition: .5s ease;
+}
+
+.nosotros-lee-mas-btn {
+  font-size: 1em;
+  color: #BF5D39;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 900;
+  border-radius: 8px;
+  border: 3px solid #BF5D39;
+  margin-right: 10px;
+}
+
+.nosotros-lee-mas-btn:hover {
+  background-color: #BF5D39;
+  color: white;
+  transition: .5s ease;
+}
+
+/* Creemos Information - Area */
+
+.creemos-information-container {
+  position: relative;
+  flex-direction: column;
+}
+
+.creemos-information-1 .creemos-information-container .creemos-information-content {
+  column-gap: 20px;
+  width: 90%;
+}
+
+.creemos-information-img img {
+  max-width: 50%;
+  min-width: 500px;
+  border-radius: 8%;
+}
+
+.creemos-information-info .creemos-information-description {
+  max-width: 1050px;
+  color: #BF5D39;
+}
+
+.creemos-information-info .creemos-information-description h2 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.creemos-information-info .creemos-information-description h3 {
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.creemos-information-info .creemos-information-description p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1.7em;
+  text-align: justify;
+}
+
+
+/* Historia information Area */
+
+.historia-information-container {
+  position: relative;
+  flex-direction: column;
+}
+
+.historia-information-1 .historia-information-container .historia-information-content {
+  column-gap: 20px;
+  width: 90%;
+}
+
+.historia-information-img img {
+  max-width: 50%;
+  min-width: 500px;
+  border-radius: 8%;
+}
+
+.historia-information-info .historia-information-description {
+  max-width: 1000px;
+  color: #BF5D39;
+}
+
+.historia-information-info .historia-information-description h2 {
+  font-size: 27px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.historia-information-info .historia-information-description p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 2em;
+  text-align: justify;
+}
+
+/* Pastores Information Area */
+
+.pastores-information-container {
+  position: relative;
+  flex-direction: column;
+}
+
+.pastores-information-1 .pastores-information-container .pastores-information-content {
+  column-gap: 20px;
+  width: 90%;
+}
+
+.pastores-information-img img {
+  max-width: 50%;
+  min-width: 500px;
+  border-radius: 8%;
+}
+
+.pastores-information-info .pastores-information-description {
+  max-width: 700px;
+  color: #BF5D39;
+}
+
+.pastores-information-info .pastores-information-description h2 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.pastores-information-info .pastores-information-description p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 2em;
+  text-align: justify;
+}
+
+
+/* Creemos Lee Mas area */
+
+.creemos-lee-mas-container {
+  position: relative;
+  flex-direction: column;
+}
+
+.creemos-lee-mas-1 .creemos-lee-mas-container .creemos-lee-mas-content {
+  column-gap: 20px;
+  width: 75%;
+}
+
+.creemos-lee-mas-img img {
+  max-width: 50%;
+  min-width: 500px;
+  border-radius: 8%;
+}
+
+.creemos-lee-mas-info .creemos-lee-mas-description {
+  max-width: 1000px;
+  color: #BF5D39;
+  text-align: center;
+}
+
+.creemos-lee-mas-info .creemos-lee-mas-description h2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.creemos-lee-mas-info .creemos-lee-mas-description p {
+  font-size: 14px;
+  font-weight: 500;
+  pointer-events: none;
+  color: white;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #BF5D39;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #F2D5A0;
+  border: 4px solid #BF5D39;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #BF5D39;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #BF5D39;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #BF5D39;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #BF5D39 transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: #BF5D39;
+  position: relative;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-align-last: center;
+}
+
+.content h2 {
+  padding-bottom: 10px;
+}
+
+.content p {
+  line-height: 2em;
+}
+
+/* Historia Lee Mas Area */
+
+.historia-lee-mas-container {
+  position: relative;
+  flex-direction: column;
+}
+
+.historia-lee-mas-1 .historia-lee-mas-container .historia-lee-mas-content {
+  column-gap: 20px;
+  width: 75%;
+}
+
+.historia-lee-mas-img img {
+  max-width: 50%;
+  min-width: 500px;
+  border-radius: 8%;
+}
+
+.historia-lee-mas-info .historia-lee-mas-description {
+  max-width: 1000px;
+  color: #BF5D39;
+  text-align: center;
+}
+
+.historia-lee-mas-info .historia-lee-mas-description h2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.historia-lee-mas-info .historia-lee-mas-description p {
+  font-size: 15px;
+  font-weight: 800;
+  color: white;
+  pointer-events: none;
+}
+
+/* Pastores Lee Mas Area */
+
+.pastores-lee-mas-container {
+  position: relative;
+  flex-direction: column;
+}
+
+.pastores-lee-mas-1 .pastores-lee-mas-container .pastores-lee-mas-content {
+  column-gap: 50px;
+  width: 80%;
+}
+
+.pastores-lee-mas-img img {
+  max-width: 50%;
+  min-width: 500px;
+  border-radius: 8%;
+}
+
+.pastores-lee-mas-info .pastores-lee-mas-description {
+  max-width: 900px;
+  color: #BF5D39;
+  text-align: center;
+}
+
+.pastores-lee-mas-info .pastores-lee-mas-description h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.pastores-lee-mas-info .pastores-lee-mas-description p {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  pointer-events: none;
+}
+
+/* ---- nosotros.html ----- */
+
+/* breadcrumb area */
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  text-align:center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "|\00a0";
+}
+
+ul.breadcrumb li a {
+  color: #0D0D0D;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #BF5D39;
+  text-decoration: none;
+}
+
+/* Ministerios - Area */
+
+.ministerio-section {
+  padding: 100px;
+}
+
+.ministerio-heading {
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  color: #BF5D39;
+  text-align: center;
+}
+
+.ministerios-page-container {
+  position: relative;
+  flex-direction: column;
+}
+
+.ministerios-1 .ministerios-container .ministerios-content {
+  column-gap: 100px;
+  width: 70%;
+}
+
+.ministerios-img img {
+  max-width: 50%;
+  min-width: 500px;
+  border-radius: 8%;
+  text-align: center;
+}
+
+.ministerios-info .ministerios-description {
+  max-width: 800px;
+  color: #BF5D39;
+}
+
+.ministerios-info .ministerios-description h2 {
+  font-size: 45px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  margin-top: 60px;
+}
+
+.ministerios-info .ministerios-description h3 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ministerios-info .ministerios-description p {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.text-white {
+  color: white;
+  cursor: pointer;
+}
+
+.ministerio-color-btn {
+  font-size: 20px;
+  color:#BF5D39;
+  background: white;
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 900;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.ministerio-color-btn:hover {
+  background-color: #BF5D39;
+  color: white;
+  transition: .5s ease;
+}
+
+.ministerio-border-btn  {
+  font-size: 15px;
+  color: #BF5D39;
+  background: white;
+  display: inline-block;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 900;
+  border-radius: 8px;
+  border: 3px solid #BF5D39;
+  margin-top: 20px;
+}
+
+.ministerio-border-btn:hover {
+  background-color: #BF5D39;
+  color: white;
+  transition: .5s ease;
+}
+
+/* Ministerios Pages */
+
+.ministerio-banner-area {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.caballeros-banner-img {
+  background-image: url("../images/caballeros/reunion_de_caballeros.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-position: center;
+  filter: brightness(80%)
+}
+
+ .damas-banner-img {
+  background-image: url("../images/damas/reunion_de_damas.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-position: center;
+  filter: brightness(80%)
+}
+
+ .adolescentes-banner-img {
+  background-image: url("../images/adolescentes/reunion_de_adolescentes.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-position: center;
+  filter: brightness(80%)
+}
+
+ .ninos-banner-img {
+  background-image: url("../images/ninos/reunion_de_ninos.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-position: center;
+  filter: brightness(80%)
+}
+
+ .adoracion-banner-img {
+  background-image: url("../images/adoracion/culto_de_adoracion.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-position: center;
+  filter: brightness(80%)
+}
+
+.ministerio-banner-area .banner-content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.ministerio-banner-area .banner-content h2 {
+  font-size: 65px;
+  margin-bottom: 15px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.ministerio-banner-area .banner-content h3 {
+  font-size: 45px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.ministerio-banner-area .banner-content p {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 100;
+  margin: 10px;
+}
+
+/* Ministerios Column */
+
+
+.ministerios-mf-column {
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+  height: 300px;
+}
+
+.ministerios-mf-column-brown {
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+  height: 300px;
+  color: #BF5D39;
+  text-align: center;
+}
+
+.ministerios-mf-column-brown h2 {
+  padding: 30px;
+}
+
+.ministerios-mf-column {
+  float: left;
+  width: 33.33%;
+  padding: 40px;
+  height: 300px;
+  color: white;
+  background-color: #BF5D39;
+  text-align: center;
+}
+
+.ministerios-mf-column h2 {
+  padding: 30px;
+}
+
+.ministerios-mf-column-brown h2 {
+  padding: 30px;
+}
+
+.ministerios-mf-area p {
+  max-width: 800px;
+  margin-bottom: 35px;
+  line-height: 2em;
+  text-align: center;
+  padding-left: 0;
+}
+
+.ministerios-mf-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Ministerios - Gallery */
+
+.ministerio-gallery-section {
+  padding: 50px;
+}
+
+.fotos-heading {
+ position: relative;
+}
+
+.fotos-heading h2 {
+  font-size: 70px;
+  font-weight: 900;
+  color: #BF5D39;
+  margin-bottom: 40px;
+}
+
+.fotos-heading h2:before {
+  content: "";
+  display: block;
+  width: 550px;
+  height: 20px;
+  background: #BF5D39;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  z-index: -2;
+}
+
+.fotos-heading h2:after {
+  content: "";
+  display: block;
+  width: 550px;
+  height: 20px;
+  background: #BF5D39;
+  position: absolute;
+  right: 0;
+  top: 25%;
+  z-index: -2;
+}
+
+.fotos-heading span {
+  background-color: white;
+  padding: 40px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.gallery a {
+  height: 250px;
+  width: 350px;
+  margin: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.gallery a img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 3px 5px #000;
+}
+
+
+.gallery a img:hover {
+  transform: scale(1.5);
+}
+
+
+#lg-download {
+  display: none;
+}
+
+#lg-counter {
+  display: none !important;
+}
+
+/* ---- ministerio.html ----- */
+
+/* Ubicacion area */
+
+.ubicacion-information-container {
+  position: relative;
+  flex-direction: column;
+}
+
+.ubicacion-heading {
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #BF5D39;
+  text-align: center;
+}
+
+.ubicacion-line-heading {
+ position: relative;
+}
+
+.ubicacion-line-heading h2 {
+  font-size: 50px;
+  font-weight: 900;
+  color: #BF5D39;
+  margin-bottom: 40px;
+}
+
+.ubicacion-line-heading h2:before {
+  content: "";
+  display: block;
+  width: 750px;
+  height: 20px;
+  background: #BF5D39;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  z-index: -2;
+}
+
+.ubicacion-line-heading h2:after {
+  content: "";
+  display: block;
+  width: 750px;
+  height: 20px;
+  background: #BF5D39;
+  position: absolute;
+  right: 0;
+  top: 25%;
+  z-index: -2;
+}
+
+.ubicacion-line-heading .line-brown {
+  background-color: white;
+  padding: 30px;
+}
+
+.ubicacion-information-1 .ubicacion-information-container .ubicacion-information-content {
+  column-gap: 80px;
+  width: 60%;
+}
+
+.ubicacion-information-img img {
+  max-width: 100%;
+  min-width: 500px;
+  border-radius: 8%;
+}
+
+.ubicacion-information-info .ubicacion-information-description {
+  max-width: 800px;
+}
+
+.ubicacion-information-description i  {
+  font-size: 30px;
+}
+
+.ubicacion-information-description a:hover {
+  color: #0D0D0D;
+}
+
+.ubicacion-information-info .ubicacion-information-description h2 {
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: #BF5D39;
+  text-align: justify;
+}
+
+.ubicacion-information-info .ubicacion-information-description p {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.ubicacion-border-btn {
+  display: inline-block;
+  font-size: 20px;
+  color: #BF5D39;
+  padding: 10px 30px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 900;
+  border-radius: 8px;
+  border: 3px solid #BF5D39;
+  margin-bottom: 10px;
+}
+
+.ubicacion-border-btn:hover {
+  background-color: #BF5D39;
+  color: white !important;
+  transition: .5s ease;
+}
+
+/* Mapa Area */
+
+.map-section {
+  padding: 50px;
+}
+
+iframe {
+  width: 750px;
+  padding-right: 50px;
+}
+
+.mapa-information-container {
+  position: relative;
+  flex-direction: column;
+}
+
+.mapa-information-1 .mapa-information-container .mapa-information-content {
+  column-gap: 20px;
+  width: 75%;
+}
+
+.mapa-information-img img {
+  max-width: 50%;
+  min-width: 500px;
+  border-radius: 8%;
+  text-align: center;
+}
+
+.mapa-information-info .mapa-information-description {
+  max-width: 900px;
+  color: #BF5D39;
+}
+
+.mapa-information-description i  {
+  font-size: 30px;
+}
+
+.mapa-information-description a:hover {
+  color: #0D0D0D;
+}
+
+.mapa-information-info .mapa-information-description h2 {
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.mapa-information-info .mapa-information-description p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 2em;
+}
+
+/* ---- ubicacion.html ----- */
+
+/* Footer section */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color:white;
+  background-color: #BF5D39;
+  padding: 60px 0;
+}
+
+.icon-footer {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.icon-footer a {
+  text-align: center;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 40px;
+}
+
+.icon-footer i{
+  padding: 10px;
+}
+
+.icon-footer a:hover {
+  color: #F2D5A0;
+}
+
+
+/* All Media Queries  */
+
+/* Scroll Down -  Phone  */
+
+@media only screen and (min-width: 321px)
+and (max-width: 668px) {
+   .down-arrow .scroll-down {
+       margin-top: 40px;
+   }
+}
+
+/* Scroll Down -  Small Phone  */
+
+@media only screen and (max-width: 320px) {
+  .down-arrow .scroll-down {
+      margin-top: 40px;
+  }
+}
+
+/* Navbar - No Color  */
+
+/* Navbar Full Screen - Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 1180px) {
+
+  header {
+    padding: 10px 50px 0;
+  }
+
+  .logo-white a {
+    font-size: 30px;
+  }
+
+  .overlay-n a {
+    font-size: 40px;
+    padding: 30px;
+  }
+
+  span  {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    list-style: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    width:  35px;
+    height: 5px;
+    background: #0D0D0D;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .hamburger .white-line {
+    width:  35px;
+    height: 5px;
+    background: white;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #F2D5A0;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+
+  .logo-white a {
+    font-size: 30px;
+  }
+
+  .logo-white img {
+    width: 50px;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+  }
+
+}
+
+/* Navbar Full Screen - Phone */
+
+@media only screen and (min-width: 321px)
+and (max-width: 668px) {
+
+  header  {
+    padding: 0;
+  }
+
+  .logo-white a {
+    font-size: 30px;
+  }
+
+  .overlay-n a {
+    font-size: 80px;
+    padding: 20px;
+  }
+
+  span  {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    list-style: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    width:  30px;
+    height: 4px;
+    background: #0D0D0D;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .hamburger .white-line {
+    width:  30px;
+    height: 4px;
+    background: white;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #F2D5A0;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+
+  .logo-white a {
+    font-size: 20px;
+  }
+
+  .logo-white img {
+    width: 40px;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+  }
+
+  .overlay-content-phone {
+    right: 2%;
+  }
+}
+
+/* Nav Full Screen - Small Phone  */
+
+@media only screen and (max-width: 320px) {
+
+  header  {
+    padding: 0;
+  }
+
+  .logo-white a {
+    font-size: 30px;
+    padding: 20px 0 20px 20px;
+  }
+
+  .overlay-n a {
+    font-size: 40px;
+    padding: 20px;
+  }
+
+  span  {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    list-style: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    width:  30px;
+    height: 4px;
+    background: #0D0D0D;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .hamburger .white-line {
+    width:  30px;
+    height: 4px;
+    background: white;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #F2D5A0;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+
+  .logo-white a {
+    font-size: 20px;
+  }
+
+  .logo-white img {
+    width: 40px;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+  }
+
+}
+
+/* Navbar - Color  */
+
+/* Navbar Full Screen - Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 1180px) {
+
+  header {
+    padding: 10px 50px 0;
+  }
+
+  span  {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    list-style: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    width:  35px;
+    height: 5px;
+    background: #0D0D0D;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .hamburger .white-line {
+    width:  35px;
+    height: 5px;
+    background: white;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #F2D5A0;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+
+  .logo a {
+    font-size: 30px;
+    }
+
+  .logo img {
+    width: 50px;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+  }
+
+}
+
+/* Navbar Full Screen - Phone */
+
+@media only screen and (min-width: 321px)
+and (max-width: 668px) {
+
+  header  {
+    padding: 0;
+  }
+
+  .overlay-n a {
+    font-size: 40px;
+    padding: 20px;
+  }
+
+  span  {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    list-style: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    width:  30px;
+    height: 4px;
+    background: #0D0D0D;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .hamburger .white-line {
+    width:  30px;
+    height: 4px;
+    background: white;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #F2D5A0;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+
+  .logo a {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+  }
+
+  .overlay-content-phone {
+    right: 2%;
+  }
+}
+
+/* Nav Full Screen - Small Phone  */
+
+@media only screen and (max-width: 320px) {
+
+  header  {
+    padding: 0;
+  }
+
+  .overlay-n a {
+    font-size: 40px;
+    padding: 20px;
+  }
+
+  span  {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    list-style: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    width:  30px;
+    height: 4px;
+    background: #0D0D0D;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .hamburger .white-line {
+    width:  30px;
+    height: 4px;
+    background: white;
+    margin: 6px 0;
+    border-radius: 10px;
+  }
+
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #F2D5A0;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+
+  .logo a {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+  }
+}
+
+/* Index - Page  */
+
+/* Banner Monitor */
+
+@media only screen and (min-width: 1600px) {
+
+.banner-area .banner-content h2  {
+    font-size: 100px;
+    margin-bottom: 15px;
+  }
+
+  .banner-btn {
+    font-size: 25px;
+    margin-left: 25px;
+  }
+}
+
+/* Monitor Screen */
+
+@media only screen and (min-width: 1600px) {
+  .section {
+    padding: 6rem 3rem 6.5rem;
+  }
+
+  .horarios-section {
+    padding: 100px;
+  }
+}
+
+/* Monitor Screen */
+
+@media only screen and (min-width: 1600px) {
+
+  .ubicacion-line-heading h2:before {
+    content: "";
+    display: block;
+    width: 1090px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    z-index: -2;
+  }
+
+  .ubicacion-line-heading h2:after {
+    content: "";
+    display: block;
+    width: 1090px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    z-index: -2;
+  }
+
+  .fotos-heading h2:before {
+    content: "";
+    display: block;
+    width: 1800px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    left: 0;
+    top: 25%;
+    z-index: -2;
+  }
+
+  .fotos-heading h2:after {
+    content: "";
+    display: block;
+    width: 1800px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    z-index: -2;
+  }
+}
+
+/* Message - Monitor */
+
+@media only screen and (min-width: 1600px) {
+  .msg-area h2 {
+    font-size: 50px;
+  }
+
+  .msg-area p {
+    font-size: 30px;
+  }
+}
+
+/* Horarios Monitor*/
+
+@media only screen and (min-width: 1600px) {
+
+  .horarios-text h2 {
+    font-size: 40px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .horarios-text p {
+    font-size: 30px;
+    padding: 0;
+  }
+}
+
+/* Banner Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 1180px) {
+
+  .banner-area {
+    min-height: 900px;
+    padding: 20px;
+  }
+
+  .banner-area .banner-content h2 {
+    font-size: 90px;
+  }
+
+  .banner-area .banner-content p {
+    font-size: 40px;
+    line-height: 1.5em;
+  }
+
+  .banner-btn {
+    margin-left: 0;
+    font-size: 30px;
+    margin-right: 20px;
+  }
+
+}
+
+/* Message Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 1180px) {
+
+  .msg-area {
+    padding: 50px;
+  }
+
+  .msg-area h2 {
+    font-size: 45px;
+  }
+
+  .msg-area p {
+    font-size: 29px;
+  }
+}
+
+/* Horarios Tablet*/
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px) {
+
+  .horarios-section {
+    padding: 50px;
+  }
+
+  .horarios-heading {
+    font-size: 50px;
+  }
+
+  .horarios-text h2 {
+    font-size: 55px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .horarios-text p {
+    font-size: 50px;
+    padding: 0;
+  }
+
+  .horarios-column {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .horarios-section {
+    padding: 50px;
+  }
+
+  .horarios-heading {
+    font-size: 40px;
+  }
+
+  .horarios-text h2 {
+    font-size: 24px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .horarios-text p {
+    font-size: 22px;
+    padding: 0;
+  }
+}
+
+/* Banner Phone */
+
+@media only screen and (min-width: 300px)
+and (max-width: 668px)  {
+
+  .banner-area {
+    min-height: 700px;
+  }
+
+  .banner-area .banner-content h2 {
+    font-size: 45px;
+    margin-top: 10px;
+  }
+
+  .banner-area .banner-content p {
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  .banner-btn {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 25px;
+  }
+
+}
+
+/* Message Phone */
+
+@media only screen and (min-width: 300px)
+and (max-width: 668px) {
+
+  .msg-area {
+    padding: 15px;
+  }
+
+  .msg-area h2 {
+    font-size: 25px;
+  }
+
+  .msg-area p {
+    font-size: 18px;
+  }
+}
+
+/* Horarios Phone */
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+  .horarios-section {
+    padding: 30px;
+  }
+
+  .horarios-heading {
+    font-size: 20px;
+  }
+
+  .horarios-column {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .horarios-text h2 {
+    font-size: 22px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .horarios-text p {
+    font-size: 20px;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px)  {
+
+  .horarios-section {
+    padding: 20px;
+  }
+
+  .horarios-heading {
+    font-size: 18px;
+  }
+
+  .horarios-column {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .horarios-text h2 {
+    font-size: 22px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .horarios-text p {
+    font-size: 20px;
+    padding: 0;
+  }
+}
+
+/* Banner - Small Phone */
+
+@media only screen and (max-width: 320px) {
+  .banner-area .banner-content h2 {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+
+  .banner-area .banner-content p {
+    font-size: 20px;
+    margin: 10px;
+  }
+
+  .banner-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Nosotros - Page  */
+
+/* Monitor Screen */
+
+@media only screen and (min-width: 1600px) {
+  .nosotros-image-container .btn {
+    font-size: 40px;
+  }
+}
+
+/* Creemos-Information - Monitor */
+
+@media only screen and (min-width: 1600px) {
+
+  .creemos-information-1 .creemos-information-container .creemos-information-content {
+    column-gap: 20px;
+    width: 65%;
+  }
+}
+
+/* Historia-Information Monitor  */
+
+@media only screen and (min-width: 1600px) {
+
+  .historia-information-1 .historia-information-container .historia-information-content {
+    column-gap: 20px;
+    width: 65%;
+  }
+}
+
+/* Pastores-Information Monitor */
+
+@media only screen and (min-width: 1600px) {
+
+  .pastores-information-1 .pastores-information-container .pastores-information-content {
+    column-gap: 20px;
+    width: 65%;
+  }
+}
+
+/* Creemos Lee Mas Monitor */
+
+@media only screen and (min-width: 1600px) {
+
+  .creemos-lee-mas-1 .creemos-lee-mas-container .creemos-lee-mas-content {
+    column-gap: 20px;
+    width: 60%;
+  }
+}
+
+/* Historia Lee Mas Monitor */
+
+@media only screen and (min-width: 1600px) {
+
+  .historia-lee-mas-1 .historia-lee-mas-container .historia-lee-mas-content {
+    column-gap: 20px;
+    width: 60%;
+  }
+}
+
+/* Pastores Lee Mas Monitor */
+
+@media only screen and (min-width: 1600px) {
+
+  .pastores-lee-mas-1 .pastores-lee-mas-container .pastores-lee-mas-content {
+    column-gap: 20px;
+    width: 70%;
+  }
+}
+
+/* Nosotros Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px)  {
+
+  .nosotros-section {
+    padding: 80px;
+  }
+
+  .nosotros-lee-section {
+    padding: 170px 30px 0 30px;
+  }
+
+  .nosotros-information-section {
+    padding: 30px;
+  }
+
+  .nosotros-heading {
+    font-size: 45px;
+    padding: 10px;
+  }
+
+  .nosotros-heading h2 {
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+
+  .nosotros-column {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .nosotros-image-container .btn {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and
+(max-width: 1180px) {
+
+  .nosotros-section {
+    padding: 50px;
+  }
+
+  .nosotros-heading {
+    font-size: 45px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Creemos Information - Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px)  {
+
+  .creemos-information-1 .creemos-information-container .creemos-information-content {
+    display: grid;
+    width: 80%;
+    row-gap: 20px;
+  }
+
+  .creemos-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 80%;
+    width: 50%;
+  }
+
+  .creemos-information-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .creemos-information-info .creemos-information-description h2 {
+    font-size: 40px;
+    font-weight: 800;
+    padding: 10px;
+  }
+
+  .creemos-information-info .creemos-information-description p {
+   font-size: 20px;
+   text-align: center;
+  }
+
+  .nosotros-page-heading {
+    margin-top: 130px;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .nosotros-information-section {
+    padding: 50px;
+  }
+
+  .nosotros-page-heading {
+    margin-top: 80px;
+  }
+
+  .creemos-information-info .creemos-information-description {
+    max-width: 1180px;
+  }
+
+  .creemos-information-1 .creemos-information-container .creemos-information-content {
+    column-gap: 30px;
+    width: 100%;
+  }
+
+  .creemos-information-img img  {
+    min-width: 400px;
+  }
+
+  .creemos-information-info .creemos-information-description h2 {
+    font-size: 23px;
+  }
+
+  .creemos-information-info .creemos-information-description p {
+    font-size: 13px;
+  }
+
+  .nosotros-btn {
+    font-size: 12px;
+  }
+
+}
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+    .nosotros-heading h2 {
+      margin-top: 100px;
+      margin-bottom: 20px;
+    }
+
+    .nosotros-page-heading {
+      margin-top: 90px;
+    }
+
+    .nosotros-lee-mas-heading {
+      margin-top: 0;
+    }
+
+    .nosotros-btn {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px) {
+
+  .nosotros-heading h2 {
+    margin-top: 120px;
+    margin-bottom: 0;
+  }
+
+  .nosotros-page-heading {
+    margin-top: 100px;
+  }
+
+  .nosotros-lee-mas-heading {
+    margin-top: 0;
+  }
+
+}
+
+/* Historia Information - Tablet  */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px) {
+
+  .historia-information-1  .historia-information-container .historia-information-content {
+    display: grid;
+    width: 80%;
+    row-gap: 20px;
+  }
+
+  .historia-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 80%;
+    width: 50%;
+  }
+
+  .historia-information-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .historia-information-info .historia-information-description h2 {
+    font-size: 45px;
+    font-weight: 900;
+    padding: 10px;
+  }
+
+  .historia-information-info .historia-information-description p {
+   font-size: 20px;
+   text-align: center;
+  }
+
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .historia-information-1 .historia-information-container .historia-information-content {
+    column-gap: 20px;
+    width: 100%;
+  }
+
+  .historia-information-img img {
+    min-width: 400px;
+  }
+
+  .historia-information-info .historia-information-description {
+    max-width: 1180px;
+  }
+
+
+    .historia-information-info .historia-information-description h2 {
+      font-size: 23px;
+    }
+
+  .historia-information-info .historia-information-description p {
+   font-size: 13px;
+  }
+
+}
+
+/* Pastores Information - Tablet  */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px) {
+
+  .pastores-information-1  .pastores-information-container .pastores-information-content {
+    display: grid;
+    width: 80%;
+    row-gap: 20px;
+  }
+
+  .pastores-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 80%;
+    width: 50%;
+  }
+
+  .pastores-information-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .pastores-information-info .pastores-information-description h2 {
+    font-size: 39px;
+    font-weight: 900;
+    padding: 10px;
+  }
+
+  .pastores-information-info .pastores-information-description p {
+   font-size: 19px;
+   text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .pastores-information-1 .pastores-information-container .pastores-information-content {
+    column-gap: 30px;
+    width: 100%;
+  }
+
+  .pastores-information-img img {
+    min-width: 400px;
+  }
+
+  .pastores-information-info .pastores-information-description {
+    max-width: 850px;
+  }
+
+  .pastores-information-info .pastores-information-description h2 {
+    font-size: 23px;
+  }
+
+  .pastores-information-info .pastores-information-description p {
+   font-size: 13px;
+  }
+
+}
+
+/* Creemos Lee Mas Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px) {
+
+  .creemos-lee-mas-1 .creemos-lee-mas-container .creemos-lee-mas-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .creemos-lee-mas-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 70%;
+    width: 50%;
+  }
+
+  .creemos-lee-mas-info .creemos-lee-mas-description h2 {
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .creemos-lee-mas-info .lee-mas-description p {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 2.5em;
+  }
+
+  .timeline-creemos {
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .nosotros-lee-section {
+    padding: 100px;
+  }
+
+  .creemos-lee-mas-1 .creemos-lee-mas-container .creemos-lee-mas-content {
+    column-gap: 20px;
+    width: 100%;
+  }
+
+  .creemos-lee-mas-img img {
+    max-width: 50%;
+    min-width: 500px;
+    border-radius: 8%;
+  }
+
+  .creemos-lee-mas-info .creemos-lee-mas-description p {
+    font-size: 7px;
+  }
+
+  .nosotros-lee-mas-btn {
+    font-size: 15px;
+    margin: 15px;
+    width: 50%;
+  }
+
+  .fotos-heading h2 span {
+    font-size: 50px;
+  }
+
+}
+
+/* Historia Lee Mas Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px) {
+
+  .historia-lee-mas-1  .historia-lee-mas-container .historia-lee-mas-content {
+    display: grid;
+    width: 80%;
+    row-gap: 20px;
+  }
+
+  .historia-lee-mas-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 70%;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .historia-lee-mas-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .historia-lee-mas-info .historia-lee-mas-description h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .historia-lee-mas-info .historia-lee-mas-description p  {
+    display: none;
+  }
+
+  .nosotros-lee-mas-btn {
+    font-size: 15px;
+    margin: 15px;
+  }
+
+  .nosotros-lee-mas-heading {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .nosotros-lee-section {
+    padding: 50px;
+  }
+
+  .nosotros-lee-mas-heading {
+    margin-top: 100px;
+  }
+
+  .historia-lee-mas-1 .historia-lee-mas-container .historia-lee-mas-content {
+    column-gap: 20px;
+    width: 100%;
+  }
+
+  .historia-lee-mas-info .historia-lee-mas-description p  {
+    display: none;
+  }
+
+}
+
+/* Pastores Lee Mas Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px) {
+
+  .pastores-lee-mas-1  .pastores-lee-mas-container .pastores-lee-mas-content {
+    display: grid;
+    width: 80%;
+    row-gap: 20px;
+  }
+
+  .pastores-lee-mas-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 70%;
+    width: 50%;
+  }
+
+  .pastores-lee-mas-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .pastores-lee-mas-info .pastores-lee-mas-description h2 {
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .pastores-lee-mas-info .pastores-lee-mas-description p {
+    display: none;
+  }
+
+  .nosotros-lee-mas-btn {
+    font-size: 15px;
+    margin: 15px;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .pastores-lee-mas-1 .pastores-lee-mas-container .pastores-lee-mas-content {
+    column-gap: 10px;
+    width: 100%;
+  }
+
+  .pastores-lee-mas-info .pastores-lee-mas-description p {
+    font-size: 7px;
+  }
+}
+
+/* Nosotros Phone */
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+  .nosotros-section {
+    padding: 20px;
+  }
+
+  .nosotros-heading {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+
+  .nosotros-column {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .nosotros-image-container .btn {
+    font-size: 40px;
+  }
+
+}
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px) {
+
+  .nosotros-heading {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+
+  .nosotros-column {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .nosotros-section {
+    padding: 20px;
+  }
+
+  .nosotros-lee-mas-btn {
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+}
+
+/* Creemos Information - Phone  */
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+  .nosotros-information-section {
+    padding: 30px;
+  }
+
+  .creemos-information-1  .creemos-information-container .creemos-information-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .creemos-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .creemos-information-info .creemos-information-description h2 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  .creemos-information-info .creemos-information-description p {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+  .nosotros-lee-mas-btn {
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px) {
+
+  .nosotros-information-section {
+    padding: 30px;
+  }
+
+  .creemos-information-1  .creemos-information-container .creemos-information-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .creemos-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .creemos-information-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .creemos-information-info .creemos-information-description {
+    max-width: 400px;
+  }
+
+  .creemos-information-info .creemos-information-description h2 {
+    font-size: 39px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .creemos-information-info .creemos-information-description p {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+  .nosotros-btn {
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+}
+
+/* Historia Information - Phone  */
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+  .historia-information-1  .historia-information-container .historia-information-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .historia-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .historia-information-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .historia-information-info .historia-information-description h2 {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+  }
+
+  .historia-information-info .historia-information-description p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+}
+
+/* Pastores Information - Phone  */
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+  .pastores-information-1  .pastores-information-container .pastores-information-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .pastores-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .pastores-information-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .pastores-information-info .pastores-information-description h2 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+  }
+
+  .pastores-information-info .pastores-information-description p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    text-align: center;
+  }
+}
+
+/* Creemos Lee Mas - Phone */
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+  .nosotros-lee-section {
+    padding: 30px;
+    margin-top: 90px;
+  }
+
+  .creemos-lee-mas-1  .creemos-lee-mas-container .creemos-lee-mas-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .creemos-lee-mas-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .creemos-lee-mas-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .creemos-lee-mas-info .creemos-lee-mas-description h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .creemos-lee-mas-info .creemos-lee-mas-description p {
+    display: none;
+  }
+
+  .timeline-creemos {
+    padding: 0;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .container::before {
+    left: 60px;
+    border: medium solid #BF5D39;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent;
+  }
+
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+  .right {
+    left: 0%;
+  }
+
+  .fotos-heading h2:before {
+    content: "";
+    display: block;
+    width: 260px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    left: 0;
+    top: 35%;
+    z-index: -2;
+  }
+
+  .fotos-heading h2:after {
+    content: "";
+    display: block;
+    width: 260px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    right: 0;
+    top: 35%;
+    z-index: -2;
+  }
+
+  .fotos-heading h2 span {
+    font-size: 50px;
+  }
+
+}
+
+/* Historia Lee Mas - Phone */
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+  .historia-lee-mas-1  .historia-lee-mas-container .historia-lee-mas-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .historia-lee-mas-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .historia-lee-mas-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .historia-lee-mas-info .historia-lee-mas-description h2 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .historia-lee-mas-info .historia-lee-mas-description p  {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px) {
+
+  .historia-lee-mas-1  .historia-lee-mas-container .historia-lee-mas-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .historia-lee-mas-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .historia-lee-mas-info .historia-lee-mas-description h2 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .historia-lee-mas-info .historia-lee-mas-description p  {
+    display: none;
+  }
+
+}
+
+/* Pastores Lee Mas - Phone */
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+  .pastores-lee-mas-1  .pastores-lee-mas-container .pastores-lee-mas-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .pastores-lee-mas-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .pastores-lee-mas-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .pastores-lee-mas-info .pastores-lee-mas-description h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+  }
+
+  .pastores-lee-mas-info .pastores-lee-mas-description p {
+    display: none;
+  }
+
+  .timeline-creemos {
+    padding: 0;
+  }
+}
+
+/* Creemos - Small Phone  */
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px) {
+
+   .nosotros-information-section {
+     padding: 20px;
+   }
+
+  .creemos-information-1  .creemos-information-container .creemos-information-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .creemos-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .creemos-information-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .creemos-information-info .creemos-information-description {
+    max-width: 400px;
+  }
+
+  .creemos-information-info .creemos-information-description h2 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .creemos-information-info .creemos-information-description p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+  .nosotros-btn {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Historia Information - Small Phone  */
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px) {
+
+  .historia-information-1  .historia-information-container .historia-information-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .historia-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .historia-information-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .historia-information-info .historia-information-description h2 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+  }
+
+  .historia-information-info .historia-information-description p {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    text-align: center;
+  }
+}
+
+/* Pastores Information - Small Phone  */
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px) {
+
+  .pastores-information-1  .pastores-information-container .pastores-information-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .pastores-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .pastores-information-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .pastores-information-info .pastores-information-description h2 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+  }
+
+  .pastores-information-info .pastores-information-description p {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    text-align: center;
+  }
+}
+
+/* Creemos Lee Mas - Small Phone  */
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px) {
+
+  .nosotros-lee-section {
+    padding: 20px;
+    margin-top: 110px;
+  }
+
+  .creemos-lee-mas-1  .creemos-lee-mas-container .creemos-lee-mas-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .creemos-lee-mas-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .creemos-lee-mas-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .creemos-lee-mas-info .creemos-lee-mas-description h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .creemos-lee-mas-info .creemos-lee-mas-description p {
+    display: none;
+  }
+
+  .timeline-creemos {
+    padding: 0;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .container::before {
+    left: 60px;
+    border: medium solid #BF5D39;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent;
+  }
+
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+  .right {
+    left: 0%;
+  }
+
+  .fotos-heading h2:before {
+    content: "";
+    display: block;
+    width: 260px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    left: 0;
+    top: 35%;
+    z-index: -2;
+  }
+
+  .fotos-heading h2:after {
+    content: "";
+    display: block;
+    width: 260px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    right: 0;
+    top: 35%;
+    z-index: -2;
+  }
+
+  .fotos-heading h2 {
+    font-size: 50px;
+  }
+}
+
+/* Pastores Lee Mas - Small Phone */
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px) {
+
+  .pastores-lee-mas-1  .pastores-lee-mas-container .pastores-lee-mas-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .pastores-lee-mas-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .pastores-lee-mas-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .pastores-lee-mas-info .pastores-lee-mas-description h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+  }
+
+  .pastores-lee-mas-info .pastores-lee-mas-description p {
+    display: none;
+  }
+
+  .timeline-creemos {
+    padding: 0;
+  }
+
+}
+
+/* Ministerios - Page  */
+
+/* Monitor Screen */
+
+@media only screen and (min-width: 1600px) {
+
+  .ministerios-1 .ministerios-container .ministerios-content {
+    column-gap: 20px;
+    width: 55%;
+  }
+}
+
+/* Ministerios - Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px) {
+
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 20px;
+  }
+
+  .ministerio-section {
+    padding: 50px;
+  }
+
+  .ministerio-heading {
+    font-size: 45px;
+    padding: 10px;
+  }
+
+  .ministerios-1 .ministerios-container .ministerios-content {
+    display: grid;
+    width: 80%;
+    row-gap: 20px;
+    text-align: center;
+  }
+
+  .ministerios-info {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .ministerios-info .ministerios-description {
+    max-width: 1020px;
+    color: #BF5D39;
+  }
+
+  .ministerios-info .ministerios-description h2 {
+    font-size: 76px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .ministerios-info .ministerios-description h3 {
+    font-size: 55px;
+    font-weight: 600;
+  }
+
+  .ministerios-info .ministerios-description p {
+    font-size: 45px;
+    font-weight: 500;
+  }
+
+  .ministerio-border-btn {
+    font-size: 35px;
+    margin-top: 40px;
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .ministerios-1 .ministerios-container .ministerios-content {
+    column-gap: 40px;
+    width: 80%;
+  }
+
+  .ministerio-section {
+    padding: 50px;
+  }
+
+  .ministerios-img img {
+    max-width: 50%;
+    min-width: 400px;
+    border-radius: 8%;
+    text-align: center;
+  }
+
+  .ministerios-info .ministerios-description {
+    max-width: 450px;
+    text-align: center;
+  }
+
+  .ministerios-info .ministerios-description h2 {
+    font-size: 40px;
+  }
+
+  .ministerio-border-btn {
+    font-size: 14px;
+    width: 60%;
+  }
+
+}
+
+/* Ministerios Page - Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px) {
+
+  .ministerio-banner-area .banner-content h2 {
+    font-size: 70px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-weight: 900;
+    letter-spacing: 5px;
+  }
+
+  .ministerio-banner-area .banner-content h3 {
+   font-size: 65px;
+   margin-bottom: 15px;
+   font-weight: 600;
+   letter-spacing: 3px;
+  }
+
+  .ministerio-banner-area .banner-content p {
+    font-size: 45px;
+    font-weight: 100;
+    margin-bottom: 20px;
+  }
+
+  .ministerio-color-btn {
+    font-size: 30px;
+    margin-bottom: 25px;
+    margin-right: 30px;
+  }
+}
+
+/* Ministerios Page - Tablet */
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .ministerio-mf-section {
+    padding: 100px;
+  }
+
+  .fotos-heading h2:before {
+    top: 35%;
+  }
+
+  .fotos-heading h2:after {
+    top: 35%;
+  }
+}
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px) {
+
+  .ministerio-mf-section {
+    padding: 0px;
+  }
+
+  .ministerios-mf-column{
+    width: 100%;
+  }
+
+  .ministerios-mf-column-brown {
+    width: 100%;
+  }
+
+  .ministerios-mf-column h2 {
+    padding: 15px;
+    font-size: 40px;
+  }
+
+  .ministerios-mf-column-brown h2 {
+    padding: 30px;
+    font-size: 40px;
+  }
+
+  .ministerios-mf-area p {
+    max-width: 1180px;
+    margin-bottom: 35px;
+    line-height: 2em;
+    text-align: center;
+    padding-left: 0;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .ministerio-mf-section {
+    padding: 50px;
+  }
+
+  .ministerios-mf-column-brown h2 {
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  .ministerios-mf-column h2 {
+    padding: 15px;
+    font-size: 25px;
+  }
+}
+
+/* Gallery Page - Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px) {
+
+  .gallery {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .gallery {
+    width: 100%;
+  }
+
+  .gallery a {
+    height: 300px;
+    width: 400px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+
+/* Ministerios - Phone */
+
+@media only screen and (min-width: 321px)
+and (max-width: 668px) {
+
+  .ministerio-section {
+    padding: 30px;
+  }
+
+  .ministerio-heading {
+    font-size: 40px;
+  }
+
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 17px;
+    line-height: 2em;
+  }
+
+  .ministerios-1 .ministerios-container .ministerios-content {
+    display: grid;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ministerios-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 95%;
+    width: 50%;
+  }
+
+  .ministerios-info {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .ministerios-info .ministerios-description {
+    max-width: 350px;
+    color: #BF5D39;
+  }
+
+  .ministerios-info .ministerios-description h2 {
+    font-size: 43px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+
+  .ministerios-info .ministerios-description h3 {
+    font-size: 40px;
+    font-weight:700;
+    margin-top: 20px;
+  }
+
+  .ministerios-info .ministerios-description p {
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+  }
+
+  .ministerio-border-btn {
+    width: 100%;
+    font-size: 20px;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Ministerios - Small Phone  */
+
+@media only screen and (max-width: 320px) {
+
+  .ministerio-section {
+    padding: 10px;
+  }
+
+  .ministerio-heading {
+    font-size: 35px;
+  }
+
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 15px;
+    line-height: 2em;
+  }
+
+  .ministerios-1  .ministerios-container .ministerios-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+    text-align: center;
+  }
+
+  .ministerios-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 85%;
+    width: 100%;
+  }
+
+  .ministerios-info {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .ministerios-info .ministerios-description {
+    max-width: 300px;
+    color: #BF5D39;
+  }
+
+  .ministerios-info .ministerios-description h2 {
+    font-size: 45px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  .ministerios-info .ministerios-description h3 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .ministerios-info .ministerios-description p {
+    font-size: 21px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .ministerio-border-btn {
+    width: 90%;
+    font-size: 15px;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Ministerios Page - Phone */
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+  .ministerio-mf-section {
+    padding: 0;
+  }
+
+  .ministerio-banner-area .banner-content h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 900;
+    letter-spacing: 5px;
+  }
+
+  .ministerio-banner-area .banner-content h3 {
+     font-size: 30px;
+     margin-bottom: 15px;
+     font-weight: 600;
+     letter-spacing: 3px;
+  }
+
+  .ministerio-banner-area .banner-content p {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 100;
+  }
+
+  .ministerio-color-btn {
+    font-size: 15px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+}
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px) {
+
+  .ministerio-mf-section {
+    padding: 0;
+  }
+
+  .ministerio-banner-area .banner-content h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 900;
+    letter-spacing: 5px;
+  }
+
+  .ministerio-banner-area .banner-content h3 {
+     font-size: 30px;
+     margin-bottom: 15px;
+     font-weight: 600;
+     letter-spacing: 3px;
+  }
+
+  .ministerio-banner-area .banner-content p {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 100;
+  }
+
+  .ministerio-color-btn {
+    font-size: 15px;
+    width: 90%;
+    margin-left: 0;
+  }
+
+}
+
+/* Ministerios Page - Phone */
+
+@media only screen and (min-width: 300px)
+and (max-width: 668px) {
+
+  .ministerios-mf-column{
+    width: 100%;
+  }
+
+  .ministerios-mf-column-brown {
+    width: 100%;
+  }
+
+  .ministerios-mf-column h2 {
+    padding: 30px;
+    font-size: 25px;
+  }
+
+  .ministerios-mf-column-brown h2 {
+    padding: 30px;
+    font-size: 25px;
+  }
+
+  .ministerios-mf-area p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    line-height: 2em;
+    text-align: center;
+    padding-left: 0;
+    font-size: 15px;
+  }
+}
+
+/* Gallery Page - Phone */
+
+@media only screen and (min-width: 300px)
+and (max-width: 668px) {
+
+  .ministerio-gallery-section {
+    padding: 10px;
+  }
+
+  .gallery a {
+    height: 230px;
+    width: 320px;
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+
+/* Ubicacion - Page  */
+
+/* Monitor Screen */
+
+@media only screen and (min-width: 1600px) {
+
+  .ubicacion-information-1 .ubicacion-information-container .ubicacion-information-content {
+    column-gap: 80px;
+    width: 50%;
+  }
+
+  .ubicacion-information-img img {
+    max-width: 100%;
+    min-width: 500px;
+    border-radius: 8%;
+    text-align: center;
+  }
+}
+
+/* Ubicacion - Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px) {
+
+  .ubicacion-heading {
+    margin-top: 100px;
+    font-size: 45px;
+  }
+
+  .ubicacion-information-1  .ubicacion-information-container .ubicacion-information-content {
+    display: grid;
+    width: 80%;
+    row-gap: 20px;
+  }
+
+  .ubicacion-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .ubicacion-information-info .ubicacion-information-description {
+    max-width: 1180px;
+  }
+
+  .ubicacion-information-info {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ubicacion-information-info .ubicacion-information-description h2 {
+    font-size: 55px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .ubicacion-information-info .ubicacion-information-description p {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+  }
+
+  .ubicacion-line-heading h2:before {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -2;
+  }
+
+  .ubicacion-line-heading h2:after {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: -2;
+  }
+
+  .ubicacion-line-heading .line-brown {
+    font-size: 40px;
+  }
+
+  .ubicacion-border-btn {
+    font-size: 30px;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px) {
+
+  .ubicacion-section {
+    padding: 50px;
+  }
+
+  .ubicacion-information-img img {
+    max-width: 50%;
+    min-width: 450px;
+    border-radius: 8%;
+  }
+
+  .ubicacion-information-1 .ubicacion-information-container .ubicacion-information-content {
+    column-gap: 20px;
+    width: 75%;
+  }
+
+  .ubicacion-border-btn {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .ubicacion-heading {
+    margin-top: 90px;
+  }
+
+  .ubicacion-line-heading h2:before {
+    content: "";
+    display: block;
+    width: 600px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    left: 0;
+    top: 45%;
+    z-index: -2;
+  }
+
+  .ubicacion-line-heading h2:after {
+    content: "";
+    display: block;
+    width: 600px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    right: 0;
+    top: 45%;
+    z-index: -2;
+  }
+
+  .ubicacion-line-heading .line-brown {
+    font-size: 40px;
+  }
+}
+
+/* Mapa - Tablet */
+
+@media only screen and (min-width: 768px)
+and (max-width: 820px)  {
+
+  iframe {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .mapa-information-1  .mapa-information-container .mapa-information-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+    text-align: center;
+  }
+
+  .mapa-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .mapa-information-info {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .mapa-information-info .mapa-information-description h2 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .mapa-information-info .mapa-information-description p {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+  }
+
+  .mapa-information-description i  {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1180px)  {
+
+  .mapa-information-1 .mapa-information-container .mapa-information-content {
+    column-gap: 0;
+    width: 100%;
+  }
+
+}
+
+/* Ubicacion - Phone */
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+  .ubicacion-section {
+    padding: 30px;
+  }
+
+  .ubicacion-heading {
+    font-size: 40px;
+    margin-top: 100px;
+  }
+
+  .ubicacion-line-heading h2:before {
+    content: "";
+    display: block;
+    width: 290px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    z-index: -2;
+  }
+
+  .ubicacion-line-heading h2:after {
+    content: "";
+    display: block;
+    width: 290px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    right: 0;
+    top: 40%;
+    z-index: -2;
+  }
+
+  .line-brown {
+    font-size: 40px;
+  }
+
+  .ubicacion-information-1  .ubicacion-information-container .ubicacion-information-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .ubicacion-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .ubicacion-information-info {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .ubicacion-information-info .ubicacion-information-description h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .ubicacion-information-info .ubicacion-information-description p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 2em;
+  }
+
+  .ubicacion-border-btn {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ubicacion-line-heading h2:before {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    left: 0;
+    top: 45%;
+    z-index: -2;
+  }
+
+  .ubicacion-line-heading h2:after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    right: 0;
+    top: 45%;
+    z-index: -2;
+  }
+}
+
+@media only screen and (min-width: 320px)
+and (max-width: 350px) {
+
+  .ubicacion-section {
+    padding: 30px;
+  }
+
+  .ubicacion-heading {
+    margin-top: 100px;
+    font-size: 35px;
+  }
+
+  .ubicacion-line-heading h2:before {
+    content: "";
+    display: block;
+    width: 290px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    z-index: -2;
+  }
+
+  .ubicacion-line-heading h2:after {
+    content: "";
+    display: block;
+    width: 290px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    right: 0;
+    top: 40%;
+    z-index: -2;
+  }
+
+  .line-brown {
+    font-size: 40px;
+  }
+
+  .ubicacion-information-1  .ubicacion-information-container .ubicacion-information-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+  }
+
+  .ubicacion-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .ubicacion-information-info {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .ubicacion-information-info .ubicacion-information-description h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .ubicacion-information-info .ubicacion-information-description p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 2em;
+  }
+
+  .ubicacion-border-btn {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ubicacion-line-heading h2:before {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    left: 0;
+    top: 45%;
+    z-index: -2;
+  }
+
+  .ubicacion-line-heading h2:after {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 20px;
+    background: #BF5D39;
+    position: absolute;
+    right: 0;
+    top: 45%;
+    z-index: -2;
+  }
+
+}
+
+/* Mapa - Phone */
+
+@media only screen and (min-width: 375px)
+and (max-width: 668px) {
+
+  .map-section {
+    padding: 30px;
+  }
+
+  iframe {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .mapa-information-1  .mapa-information-container .mapa-information-content {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+    text-align: center;
+  }
+
+  .mapa-information-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 50%;
+  }
+
+  .mapa-information-info {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .mapa-information-info .mapa-information-description h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .mapa-information-info .mapa-information-description p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 2em;
+  }
+
+  .mapa-information-info .mapa-information-description i {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 320px)
+and (max-width:350px) {
+
+    .map-section {
+      padding: 30px;
+    }
+
+    iframe {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .mapa-information-1  .mapa-information-container .mapa-information-content {
+      display: grid;
+      width: 100%;
+      row-gap: 20px;
+      text-align: center;
+    }
+
+    .mapa-information-img img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      min-width: 100%;
+      width: 50%;
+    }
+
+    .mapa-information-info {
+      min-width: 0;
+      width: 100%;
+    }
+
+    .mapa-information-info .mapa-information-description h2 {
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .mapa-information-info .mapa-information-description p {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      line-height: 2em;
+    }
+
+    .mapa-information-info .mapa-information-description i {
+      font-size: 30px;
+    }
+  }

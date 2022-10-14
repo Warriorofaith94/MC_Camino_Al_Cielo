@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="css/iglesia_styles.css" >
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/f64aae6820.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" type="image/png" href="images/cross.png">
+
+    <title> Misión Cristiana Camino al Cielo </title>
+
+  </head>
+
+  <body>
+      <div class="scrollToTop-btn flex-center">
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+
+    <header class="color-bar">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="logo">
+        Misión Cristiana <br> Camino al Cielo </a>
+      </div>
+
+      <div id="myNav" class="overlay-n">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content-regular">
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="ministerios.html">Ministerios</a></li>
+            <li><a  href="ubicacion.html">Ubicación </a></li>
+        </div>
+      </div>
+
+      <span class="gone" onclick="openNav()">
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+      </span>
+
+      <span onclick="openNav()"></span>
+
+      <nav class="nav-bar">
+        <ul>
+          <li><a class="active" href="">Nosotros</a></li>
+          <li><a href="ministerios.html">Ministerios</a></li>
+          <li><a href="ubicacion.html">Ubicación </a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <section class="nosotros-section">
+
+        <div class="nosotros-heading flex-center">
+          <h2> Nosotros </h2>
+        </div>
+
+        <div class="nosotros-row">
+          <div class="nosotros-column">
+            <div class="nosotros-image-container">
+              <img src="images/creemos.jpg" alt="creemos">
+              <a href="creemos.html"><button class="btn">Creemos</button></a>
+          </div>
+        </div>
+
+          <div class="nosotros-column">
+              <div class="nosotros-image-container">
+                <img src="images/historia.jpg" alt="historia">
+              <a href="historia.html"><button class="btn">Historia</button></a>
+          </div>
+        </div>
+
+          <div class="nosotros-column">
+                <div class="nosotros-image-container">
+                  <img src="images/pastores.jpg" alt="pastores">
+                  <a href="pastores.html"><button class="btn">Pastores</button></a>
+              </div>
+          </div>
+        </div>
+    </section>
+
+    <footer>
+      <div class="icon-footer">
+        <a href="https://www.facebook.com/misioncristianacaminoalcielo" target="_blank">
+          <i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.youtube.com/user/MCCaminoAlCielo" target="_blank">
+          <i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <p> Misión Cristiana Camino Al Cielo © 2022 </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
